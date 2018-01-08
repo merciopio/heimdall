@@ -51,3 +51,18 @@ warning: LF will be replaced by CRLF in src/main/java/.../Projeto/ServletInitial
 The file will have its original line endings in your working directory.
 warning: LF will be replaced by CRLF in src/main/java/.../Projeto/NomeProjetoApplicationTests.java.
 The file will have its original line endings in your working directory.
+
+$ git commit -m "Descrição para o commit"
+exemplo de saída:
+[master 6193f16] Commit inicial dos arquivos do projeto
+ 10 files changed, 531 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 .mvn/wrapper/maven-wrapper.jar
+ create mode 100644 .mvn/wrapper/maven-wrapper.properties
+ create mode 100644 mvnw
+ create mode 100644 mvnw.cmd
+ create mode 100644 pom.xml
+ create mode 100644 src/main/java/.../Projeto/NomeProjetoApplication.java
+ create mode 100644 src/main/java/.../Projeto/ServletInitializer.java
+ create mode 100644 src/main/resources/application.properties
+ create mode 100644 src/main/java/.../Projeto/NomeProjetoApplicationTests.java
