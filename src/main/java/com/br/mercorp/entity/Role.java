@@ -12,14 +12,21 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
-@Entity
+@Getter
+@Setter
 @NoArgsConstructor
-@Table(name = "ROLE", schema = "HEIMDALL")
+@Entity
+@Table(name = "ROLE", schema = "HEIMDALL",
+uniqueConstraints = { 
+	@UniqueConstraint(name="uk_application_name",columnNames = {"ID_APPLICATION" ,"NAME"} )
+})
 public class Role extends BaseEntity implements Serializable {
 
 	private static final long serialVersionUID = -1799251155741990772L;

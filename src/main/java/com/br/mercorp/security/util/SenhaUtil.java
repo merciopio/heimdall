@@ -1,4 +1,4 @@
-package com.br.mercorp.util;
+package com.br.mercorp.security.util;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 

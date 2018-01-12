@@ -1,4 +1,4 @@
-package com.br.mercorp.heimdall.repository;
+package com.br.mercorp.security.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -9,7 +9,11 @@ import com.br.mercorp.heimdall.repository.custom.ApplicationCustomRepository;
 
 @Repository
 @Transactional(readOnly = true)
-public interface ApplicationRepository extends JpaRepository<Application, Long>, ApplicationCustomRepository, com.br.mercorp.security.repository.ApplicationRepository{ 
+public interface ApplicationRepository extends JpaRepository<Application, Long>, ApplicationCustomRepository{ 
+
+    Application findByName(String name);
+	
+	Application findByAcronym(String acronym);
 
 	
 }

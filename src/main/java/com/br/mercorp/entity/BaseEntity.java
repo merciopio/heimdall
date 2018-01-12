@@ -34,20 +34,20 @@ public class BaseEntity implements Serializable  {
     protected int version;
 
 	@Column(name = "DATE_ADDED", nullable = false)
-	private LocalDateTime dateAdded;
+	protected LocalDateTime dateAdded;
 	
 	@Column(name = "DATE_EDITED")
-    private LocalDateTime dateEdited;
+	protected LocalDateTime dateEdited;
 
 	@PrePersist
-    public void onPrePersist() {
+	protected void onPrePersist() {
 		new LocalDateTime();
 		dateAdded = LocalDateTime.now();
 		version = 0;
     }
       
     @PreUpdate
-    public void onPreUpdate() {
+    protected void onPreUpdate() {
     	new LocalDateTime();
     	dateEdited = new LocalDateTime();
     	int new_version = version++;
