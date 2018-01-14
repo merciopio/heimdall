@@ -18,6 +18,11 @@ public class ApplicationController {
 		log.info("Tela de login");
 		return "login";
 	}
+	
+	@RequestMapping("/login")
+	public String login() {
+		return "redirect:/";
+	}
 
 	/*
 	 * @PostMapping public ResponseEntity<Response<ApplicationDTO>>

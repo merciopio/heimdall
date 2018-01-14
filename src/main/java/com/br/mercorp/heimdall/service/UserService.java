@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import com.br.mercorp.entity.User;
 
-public interface UserService extends com.br.mercorp.security.service.UserService {
+public interface UserService extends com.br.mercorp.security.service.BaseUserService {
 
 	Optional<User> findOne(long id);
 

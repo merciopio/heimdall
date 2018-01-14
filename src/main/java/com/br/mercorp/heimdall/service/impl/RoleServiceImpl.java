@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.br.mercorp.entity.Application;
@@ -14,6 +15,7 @@ import com.br.mercorp.heimdall.repository.RoleRepository;
 import com.br.mercorp.heimdall.service.RoleService;
 
 @Service
+@Qualifier("heimdallRoleServiceImpl")
 public class RoleServiceImpl implements RoleService{
 	 
 	private static final Logger log = LoggerFactory.getLogger(RoleServiceImpl.class);

@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import com.br.mercorp.entity.Application;
 
-public interface ApplicationService{
+public interface BaseApplicationService{
     
 	Optional<Application> findByName(String name);
 

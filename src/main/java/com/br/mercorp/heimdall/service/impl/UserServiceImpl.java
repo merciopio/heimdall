@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.slf4j.Logger ;
 import org.slf4j.LoggerFactory ;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ import com.br.mercorp.heimdall.service.UserService;
 import com.br.mercorp.security.util.SenhaUtil;
 
 @Service
+@Qualifier("heimdallUserServiceImpl")
 public class UserServiceImpl implements UserService {
     
 	private static final Logger log = LoggerFactory.getLogger(UserServiceImpl.class);

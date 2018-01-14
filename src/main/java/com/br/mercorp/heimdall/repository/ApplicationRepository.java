@@ -9,7 +9,7 @@ import com.br.mercorp.heimdall.repository.custom.ApplicationCustomRepository;
 
 @Repository
 @Transactional(readOnly = true)
-public interface ApplicationRepository extends JpaRepository<Application, Long>, ApplicationCustomRepository, com.br.mercorp.security.repository.ApplicationRepository{ 
+public interface ApplicationRepository extends JpaRepository<Application, Long>, ApplicationCustomRepository, com.br.mercorp.security.repository.BaseApplicationRepository{ 
 
 	
 }

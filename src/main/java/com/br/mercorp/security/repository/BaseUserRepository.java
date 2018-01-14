@@ -1,7 +1,6 @@
 package com.br.mercorp.security.repository;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -10,11 +9,11 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.br.mercorp.entity.User;
-import com.br.mercorp.heimdall.repository.custom.UserCustomRepository;
+import com.br.mercorp.security.repository.custom.BaseUserCustomRepository;
 
 @Repository
 @Transactional(readOnly = true)
-public interface UserRepository extends JpaRepository<User, Long>, UserCustomRepository{ 
+public interface BaseUserRepository extends JpaRepository<User, Long>, BaseUserCustomRepository{ 
 
 	User findByLogin(String login);
 

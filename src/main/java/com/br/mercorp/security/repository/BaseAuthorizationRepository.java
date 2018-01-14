@@ -12,13 +12,13 @@ import com.br.mercorp.entity.Application;
 import com.br.mercorp.entity.Authorization;
 import com.br.mercorp.entity.Role;
 import com.br.mercorp.entity.User;
-import com.br.mercorp.heimdall.repository.custom.AuthorizationCustomRepository;
+import com.br.mercorp.security.repository.custom.BaseAuthorizationCustomRepository;
 
 @Repository
 @Transactional(readOnly = true)
-public interface AuthorizationRepository extends JpaRepository<Authorization, Long>, AuthorizationCustomRepository{
+public interface BaseAuthorizationRepository extends JpaRepository<Authorization, Long>, BaseAuthorizationCustomRepository{
 
-	@Query("select a.role from Authorization a where a.application = :application and a.user = :user)")
+	@Query("select a.role from Authorization a where a.role.application = :application and a.user = :user)")
     List<Role> getRoles(@Param("application") Application application, @Param("user") User user);
 	
 }

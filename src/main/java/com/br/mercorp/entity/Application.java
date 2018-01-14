@@ -1,6 +1,7 @@
 package com.br.mercorp.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -34,7 +35,7 @@ public class Application extends BaseEntity implements Serializable {
 	@Column(name = "ACRONYM")
 	private String acronym;
     
-	@NotEmpty (message = "{application.name.not.null}" )
+	//@NotEmpty (message = "{application.name.not.null}" )
 	@Column(name = "NAME")
 	private String name;
     
@@ -42,7 +43,7 @@ public class Application extends BaseEntity implements Serializable {
 	private String url;
 	
 	@OneToMany(mappedBy="application", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	private List<Role> roles;
+	private List<Role> roles = new ArrayList<Role>();
 	
 }
 

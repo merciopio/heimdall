@@ -6,15 +6,16 @@ import java.util.Optional;
 import org.slf4j.Logger ;
 import org.slf4j.LoggerFactory ;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.br.mercorp.entity.Application;
-import com.br.mercorp.entity.Role;
 import com.br.mercorp.heimdall.repository.ApplicationRepository;
 import com.br.mercorp.heimdall.service.ApplicationService;
 
 @Service
+@Qualifier("heimdallApplicationServiceImpl")
 public class ApplicationServiceImpl implements ApplicationService {
     
 	private static final Logger log = LoggerFactory.getLogger(ApplicationServiceImpl.class);

@@ -11,8 +11,8 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import com.br.mercorp.entity.Application;
 import com.br.mercorp.entity.Role;
 import com.br.mercorp.entity.User;
-import com.br.mercorp.security.service.ApplicationService;
-import com.br.mercorp.security.service.AuthorizationService;
+import com.br.mercorp.security.service.BaseApplicationService;
+import com.br.mercorp.security.service.BaseAuthorizationService;
 
 public class JwtUserFactory {
 
@@ -20,10 +20,10 @@ public class JwtUserFactory {
 	private String acronym;
 	
 	@Autowired
-	private ApplicationService applicationService;
+	private BaseApplicationService applicationService;
 	
 	@Autowired
-	private AuthorizationService authorizationService;
+	private BaseAuthorizationService authorizationService;
 	
 	/**
 	 * Converte e gera um JwtUser com base nos dados do usuário.

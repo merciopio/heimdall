@@ -4,15 +4,9 @@ import java.util.List;
 import java.util.Optional;
 
 import com.br.mercorp.entity.Application;
-import com.br.mercorp.entity.Role;
-import com.br.mercorp.entity.User;
 
-public interface ApplicationService{
+public interface ApplicationService extends com.br.mercorp.security.service.BaseApplicationService{
     
-	Optional<Application> findByName(String name);
-	
-	Optional<Application> findByAcronym(String acronym);
-
 	Optional<Application> save(Application application);
 	
 	void delete(long id);

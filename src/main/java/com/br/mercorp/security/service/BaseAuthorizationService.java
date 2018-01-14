@@ -6,7 +6,7 @@ import com.br.mercorp.entity.Application;
 import com.br.mercorp.entity.Role;
 import com.br.mercorp.entity.User;
 
-public interface AuthorizationService {
+public interface BaseAuthorizationService {
 
 	List<Role> getRoles(Application application, User user);
 	

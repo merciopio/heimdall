@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import com.br.mercorp.entity.User;
 
-public interface UserService{
+public interface BaseUserService{
 
 	Optional<User> findByLogin(String login);
 

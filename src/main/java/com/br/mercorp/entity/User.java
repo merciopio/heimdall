@@ -24,16 +24,16 @@ public class User extends BaseEntity implements Serializable {
 	
 	private static final long serialVersionUID = -6774168322973517539L;
     
-	@NotEmpty(message = "{user.name.not.null}")
+	//@NotEmpty(message = "{user.name.not.null}")
 	@Column(name = "NAME")
 	private String name;
     
-	@NotEmpty(message = "{user.login.not.null}")
+	//@NotEmpty(message = "{user.login.not.null}")
 	@Column(name = "login")
 	private String login;
 	
 	@Email
-	@NotEmpty(message = "{user.email.not.null}")
+	//@NotEmpty(message = "{user.email.not.null}")
 	@Column(name = "email")
 	private String email;
 	

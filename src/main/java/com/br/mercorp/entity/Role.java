@@ -1,6 +1,7 @@
 package com.br.mercorp.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -42,6 +43,6 @@ public class Role extends BaseEntity implements Serializable {
     private Application application;
 	
 	@OneToMany(mappedBy = "role", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	private List<Resource> resources;
+	private List<Resource> resources = new ArrayList<Resource>();
 	
 }
